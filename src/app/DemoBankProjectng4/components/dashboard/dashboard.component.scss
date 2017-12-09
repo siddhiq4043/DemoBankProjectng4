@@ -1,0 +1,23 @@
+.home-section {
+    .carousel.slide {
+        .carousel-control.left,
+        .carousel-control.right {
+            background-image: none;
+            position: absolute;
+            top: 40%;
+            height: 40px;
+            background: #004a8f;
+            width: 30px;
+            cursor: pointer;
+            outline: none;
+            padding: 4px;
+        }
+        .carousel-inner {
+            .item {
+                .a {
+                    color: transparent;
+                }
+            }
+        }
+    }
+}

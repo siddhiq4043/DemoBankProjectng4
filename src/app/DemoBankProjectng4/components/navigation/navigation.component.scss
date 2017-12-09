@@ -1,0 +1,43 @@
+.nav-menu-bar {
+    background: #004a8f;
+    border: none;
+    .navbar-header {
+        .navbar-brand {
+            height: 70px;
+        }
+    }
+    .navbar-nav {
+        li {
+            a {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                font-size: 1.1em;
+                color: #ffffff;
+                &:hover {
+                    color: #ffffff !important;
+                    background-color: #337AB7 !important;
+                }
+            }
+            &.active>a {
+                color: #ffffff !important;
+                background-color: #337AB7 !important;
+            }
+            &.open>a {
+                color: #ffffff !important;
+                background-color: #337AB7 !important;
+            }
+        }
+        .dropdown-menu {
+            background: #004a8f;
+            li {
+                ul.multi-level {
+                    background: #004a8f;
+                }
+                a {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}
