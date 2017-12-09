@@ -10,7 +10,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "build.prod": "ng build --aot --prod --progress false --base-href \"https://irfanfarhan.github.io/Angular5-Tabs-Component/\""
+        "build.prod": "ng build --aot --prod --progress false --base-href \"https://irfanfarhan.github.io/DemoBankProjectng4/\""
     },
     "private": true,
     "dependencies": {

@@ -26,7 +26,7 @@ Node.js with npm
 
 ``` bash
 git clone https://github.com/irfanfarhan/Angular5-Tabs-Component.git
-cd Angular5-Tabs-Component
+cd DemoBankProjectng4
 npm install
 ng serve
 ```
