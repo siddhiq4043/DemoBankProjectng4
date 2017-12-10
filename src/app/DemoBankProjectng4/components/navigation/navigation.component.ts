@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { MenuMetadata } from './../../model/menu-metadata.model';
 
 @Component({
   selector: 'app-navigation',
@@ -8,10 +9,10 @@ import { Router, ActivatedRoute } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class NavigationComponent implements OnInit {
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  menuMetadata: any;
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.menuMetadata = MenuMetadata;
+  }
 }

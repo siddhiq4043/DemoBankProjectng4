@@ -4,7 +4,7 @@
             margin: 0;
             a {
                 color: #313131;
-                font-size: 1.5em;
+                font-size: 1.2em;
                 line-height: 2;
                 font-weight: 200;
                 text-transform: capitalize;
@@ -13,19 +13,19 @@
                 border: 0;
             }
             &.active {
-                border-bottom: 4px solid rgba(0, 143, 104, .95);
+                border-bottom: 4px solid #337AB7;
                 a {
-                    color: rgba(0, 143, 104, 0.95);
+                    color: #337AB7;
                     font-weight: 500;
                     border-radius: 3px;
                     border: none !important;
                 }
                 &:hover {
-                    border-bottom: 4px solid rgba(0, 143, 104, .95);
+                    border-bottom: 4px solid #337AB7;
                 }
             }
             &:hover {
-                border-bottom: 4px solid rgba(107, 183, 86, .95);
+                border-bottom: 4px solid #337AB7;
                 cursor: pointer;
                 a {
                     background: none;

@@ -3,19 +3,44 @@
         .carousel-control.left,
         .carousel-control.right {
             background-image: none;
-            position: absolute;
             top: 40%;
+            position: absolute;
             height: 40px;
             background: #004a8f;
             width: 30px;
             cursor: pointer;
             outline: none;
             padding: 4px;
+            .icon-next {
+                top: 30%;
+                right: 25%;
+            }
+            .icon-prev {
+                top: 30%;
+                left: 25%;
+            }
         }
         .carousel-inner {
             .item {
                 .a {
                     color: transparent;
+                }
+            }
+        }
+        .carousel-indicators {
+            li {
+                position: relative;
+                width: 30px;
+                height: 5px;
+                margin-right: 3px;
+                margin-left: 3px;
+                text-indent: -999px;
+                background-color: rgba(255, 255, 255, .5);
+                border: none;
+                border-radius: 0;
+                margin: 0;
+                &.active {
+                    background-color: #fff;
                 }
             }
         }

@@ -3,10 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-import { WhoWeAreComponent } from './components/about-us/who-we-are/who-we-are.component';
-import { CorporateGoveranceComponent } from './components/about-us/corporate-goverance/corporate-goverance.component';
-import { PoliciesComponent } from './components/about-us/policies/policies.component';
-import { TabsDemoComponent } from './components/tabs-demo/tabs-demo.component';
+import { ProductsComponent } from './components/products/products.component';
+import { AllLoansComponent } from './components/products/all-loans/all-loans.component';
+import { LoanAgainstPropertyComponent } from './components/products/loan-against-property/loan-against-property.component';
+import { PersonalLoanComponent } from './components/products/personal-loan/personal-loan.component';
+import { HouseLoanComponent } from './components/products/house-loan/house-loan.component';
+import { BusinessLoanComponent } from './components/products/business-loan/business-loan.component';
+import { BalanceTransferTopUpLoanComponent } from './components/products/balance-transfer-top-up-loan/balance-transfer-top-up-loan.component';
 
 const demoBankng4Routes: Routes = [
   {
@@ -26,36 +29,6 @@ const demoBankng4Routes: Routes = [
       {
         path: '',
         component: AboutUsComponent
-      },
-      {
-        path: 'who-we-are',
-        component: NavigationComponent,
-        children: [
-          {
-            path: '',
-            component: WhoWeAreComponent
-          }
-        ]
-      },
-      {
-        path: 'corporate-goverance',
-        component: NavigationComponent,
-        children: [
-          {
-            path: '',
-            component: CorporateGoveranceComponent
-          }
-        ]
-      },
-      {
-        path: 'policies',
-        component: NavigationComponent,
-        children: [
-          {
-            path: '',
-            component: PoliciesComponent
-          }
-        ]
       }
     ]
   },
@@ -65,7 +38,57 @@ const demoBankng4Routes: Routes = [
     children: [
       {
         path: '',
-        component: DashboardComponent
+        component: ProductsComponent
+      },
+      {
+        path: 'all-loans',
+        component: NavigationComponent,
+        children: [
+          {
+            path: '',
+            component: AllLoansComponent
+          }
+        ]
+      },
+      {
+        path: 'loan-against-property',
+        component: NavigationComponent,
+        children: [
+          {
+            path: '',
+            component: LoanAgainstPropertyComponent
+          }
+        ]
+      },
+      {
+        path: 'personal-loans',
+        component: NavigationComponent,
+        children: [
+          {
+            path: '',
+            component: PersonalLoanComponent
+          }
+        ]
+      },
+      {
+        path: 'business-loans',
+        component: NavigationComponent,
+        children: [
+          {
+            path: '',
+            component: HouseLoanComponent
+          }
+        ]
+      },
+      {
+        path: 'balance-transfer-top-up-loans',
+        component: NavigationComponent,
+        children: [
+          {
+            path: '',
+            component: BalanceTransferTopUpLoanComponent
+          }
+        ]
       }
     ]
   },

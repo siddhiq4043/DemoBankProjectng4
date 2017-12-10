@@ -8,7 +8,7 @@ import {
   ToasterModule,
   ToasterService
 } from 'angular2-toaster/angular2-toaster';
-import { TooltipModule } from 'ngx-tooltip';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgxChartsModule } from '@swimlane/ngx-charts/release';
 import { LoadingService } from './services/loading.service';
 import { LoginRedirectComponent } from './components/login-redirect/login-redirect.component';
@@ -16,6 +16,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   imports: [
+    CarouselModule,
     CommonModule,
     BrowserModule,
     FormsModule,
@@ -23,11 +24,11 @@ import { LoaderComponent } from './components/loader/loader.component';
     HttpClientModule,
     RouterModule,
     ToasterModule,
-    TooltipModule,
     NgxChartsModule
   ],
   declarations: [LoginRedirectComponent, LoaderComponent],
   exports: [
+    CarouselModule,
     CommonModule,
     BrowserModule,
     FormsModule,
@@ -35,7 +36,6 @@ import { LoaderComponent } from './components/loader/loader.component';
     HttpClientModule,
     RouterModule,
     ToasterModule,
-    TooltipModule,
     LoginRedirectComponent,
     NgxChartsModule,
     LoaderComponent
