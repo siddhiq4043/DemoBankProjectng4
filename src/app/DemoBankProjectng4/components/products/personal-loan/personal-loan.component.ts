@@ -21,4 +21,7 @@ export class PersonalLoanComponent implements OnInit {
     this.applyModal.open(RegisterFormComponent);
     //this.loginModal.open();
   }
+  refreshApply(data) {
+    console.log(data);
+  }
 }
