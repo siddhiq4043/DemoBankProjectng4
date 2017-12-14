@@ -1,0 +1,72 @@
+<div class="col-md-12 login-form">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form [formGroup]="applyForm" rule="form" novalidate>
+                <div class=" row login-section ">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                      </span>
+                        <input class="form-control" type="text" placeholder="Name" [(ngModel)]="applyData.name" formControlName="name">
+                    </div>
+                    <br>
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">
+                        <i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
+                      </span>
+                        <input class="form-control" type="text" placeholder="Phone" [(ngModel)]="applyData.phone" formControlName="phone">
+                    </div>
+                    <br>
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">
+                          <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                        <input class="form-control" type="text" placeholder="Email" [(ngModel)]="applyData.email" formControlName="email">
+                    </div>
+                    <br>
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">
+                          <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                  </span>
+                        <input class="form-control" type="text" placeholder="City" [(ngModel)]="applyData.city" formControlName="city">
+                    </div>
+                    <br>
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </span>
+                        <input class="form-control" type="text" placeholder="Pincode" [(ngModel)]="applyData.pincode" formControlName="pincode">
+                    </div>
+                    <br>
+                    <div class="input-group input-group-sm">
+                        <select class="form-control" [(ngModel)]="applyData.jobType" formControlName="jobType">
+                            <option>Job Type</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                    </div>
+                    <br>
+                    <div class="input-group input-group-sm">
+                        <select class="form-control" [(ngModel)]="applyData.products" formControlName="products">
+                            <option>Products</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                    </div>
+                    <br><br>
+                </div>
+                <div class="row forgotpassword-section">
+                    <div class="col-lg-12 col-md-12 col-sm-12  col-xs-12 padding-none">
+                        <button type="submit" class="login-btn pull-right" (click)="confirmApply()" [disabled]="!applyForm.valid">Apply
+                          <i class="fa fa-sign-in" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
