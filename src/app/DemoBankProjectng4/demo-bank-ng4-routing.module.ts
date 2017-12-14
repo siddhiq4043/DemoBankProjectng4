@@ -89,6 +89,16 @@ const demoBankng4Routes: Routes = [
             component: BalanceTransferTopUpLoanComponent
           }
         ]
+      },
+      {
+        path: 'house-loans',
+        component: NavigationComponent,
+        children: [
+          {
+            path: '',
+            component: HouseLoanComponent
+          }
+        ]
       }
     ]
   },

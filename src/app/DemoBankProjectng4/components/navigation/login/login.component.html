@@ -1,0 +1,35 @@
+<div class="col-md-12 login-form">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form [formGroup]="loginForm" rule="form" novalidate>
+                <div class=" row login-section ">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">
+                          <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </span>
+                        <input class="form-control" type="text" placeholder="User name" [(ngModel)]="loginData.userName" formControlName="userName">
+                    </div>
+                    <br>
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">
+                          <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                        <input class="form-control" type="password" placeholder="Password" [(ngModel)]="loginData.password" formControlName="password">
+                    </div>
+                    <br><br>
+                </div>
+                <div class="row forgotpassword-section">
+                    <div class="col-lg-8 col-md-8  col-sm-8 col-xs-7 padding-none">
+                        <a class="login-btn pull-left" (click)="confirmLogin()">Forgot Password
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4  col-xs-5 padding-none">
+                        <button type="submit" class="login-btn pull-right" (click)="confirmLogin()" [disabled]="!loginForm.valid">Login
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

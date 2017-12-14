@@ -1,4 +1,4 @@
-.tabs-demo {
+.features-details {
     ul {
         li {
             margin: 0;
@@ -72,6 +72,24 @@
             &:active {
                 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
                 transform: translateY(3px);
+            }
+        }
+        ul.list-group {
+            li {
+                border: none;
+                padding: 5px;
+                i {
+                    padding-right: 5px;
+                    color: #337AB7;
+                }
+                &:hover {
+                    border: none;
+                    cursor: text;
+                    a {
+                        background: none;
+                        border: none !important;
+                    }
+                }
             }
         }
     }

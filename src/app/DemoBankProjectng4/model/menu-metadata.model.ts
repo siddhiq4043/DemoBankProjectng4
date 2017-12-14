@@ -48,6 +48,12 @@ export const MenuMetadata = [
         title: 'Balance Transfer TopUp Loans',
         iconName: 'fa-home',
         routeUrl: '/balance-transfer-top-up-loans'
+      },
+      {
+        id: 6,
+        title: 'House Loans',
+        iconName: 'fa-home',
+        routeUrl: '/house-loans'
       }
     ]
   },

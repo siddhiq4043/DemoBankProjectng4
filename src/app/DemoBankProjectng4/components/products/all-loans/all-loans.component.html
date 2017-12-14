@@ -1,19 +1,19 @@
 <div class="container tabs-demo">
     <div class="col-lg-12 col-md-12 padding-none">
-        <h1>Products</h1>
+        <h1>All Loans</h1>
     </div>
     <div class="col-lg-12 col-md-12 padding-none">
         <tabset>
             <tab *ngFor="let allLoans of allLoansMetadata; let i=index" [heading]="allLoans.title">
-                <div class="col-lg-3 col-md-3 content-panel" *ngFor="let subLoans of allLoans.subLoansList">
+                <div class="col-lg-3 col-md-3 content-panel padding-left-none" *ngFor="let subLoans of allLoans.subLoansList">
                     <div class="thumbnail">
                         <img src="{{subLoans.imgPath}}">
                         <div class="caption">
                             <h4>{{subLoans.title}}</h4>
-                            <a href="#" class="btn btn-info btn-xs pull-right" role="button">Know More</a>
-                            <a href="#" class="btn btn-info btn-xs" role="button">Create</a>
-                            <a href="#" class="btn btn-info btn-xs" role="button">Edit</a>
-                            <a href="#" class="btn btn-info btn-xs" role="button">View</a>
+                            <a routerLink="{{subLoans.routeUrl}}" class="btn btn-info btn-xs pull-right" role="button">Know More</a>
+                            <a routerLink="{{subLoans.routeUrl1}}" class="btn btn-info btn-xs" role="button">Create</a>
+                            <a routerLink="{{subLoans.routeUrl1}}" class="btn btn-info btn-xs" role="button">Edit</a>
+                            <a routerLink="{{subLoans.routeUrl1}}" class="btn btn-info btn-xs" role="button">View</a>
                         </div>
                     </div>
                 </div>

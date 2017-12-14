@@ -4,8 +4,9 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ImageComponent } from './image/image.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
-import { TabsComponent } from './tabs/tabs.component';
-import { TabComponent } from './tab/tab.component';
+import { ModalComponent } from './modal/modal.component';
+import { ModalOpen } from './modal/modal-open.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
     imports: [
@@ -16,14 +17,16 @@ import { TabComponent } from './tab/tab.component';
     declarations: [
         ImageComponent,
         ScrollToTopComponent,
-        TabsComponent,
-        TabComponent
+        ModalComponent,
+        ModalOpen,
+        ButtonComponent
     ],
     exports: [
       ImageComponent,
       ScrollToTopComponent,
-      TabsComponent,
-      TabComponent
+      ModalComponent,
+      ModalOpen,
+      ButtonComponent
     ],
     providers: [
     ]

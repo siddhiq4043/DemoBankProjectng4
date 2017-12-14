@@ -15,6 +15,8 @@ import { PersonalLoanComponent } from './components/products/personal-loan/perso
 import { HouseLoanComponent } from './components/products/house-loan/house-loan.component';
 import { BusinessLoanComponent } from './components/products/business-loan/business-loan.component';
 import { BalanceTransferTopUpLoanComponent } from './components/products/balance-transfer-top-up-loan/balance-transfer-top-up-loan.component';
+import { LoginComponent } from './components/navigation/login/login.component';
+import { FeaturesDetailsWizardComponent } from './components/products/features-details-wizard/features-details-wizard.component';
 
 @NgModule({
   imports: [CommonModule, SharedModule, LibraryModule, TabsModule.forRoot(), DemoBankng4RoutingModule],
@@ -28,9 +30,11 @@ import { BalanceTransferTopUpLoanComponent } from './components/products/balance
     PersonalLoanComponent,
     HouseLoanComponent,
     BusinessLoanComponent,
-    BalanceTransferTopUpLoanComponent
+    BalanceTransferTopUpLoanComponent,
+    LoginComponent,
+    FeaturesDetailsWizardComponent
   ],
-  entryComponents: [],
+  entryComponents: [LoginComponent],
   providers: [LoadingService]
 })
 export class DemoBankng4Module {}
