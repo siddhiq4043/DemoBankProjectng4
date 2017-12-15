@@ -1,4 +1,4 @@
-.all-loans {
+.personal-create-details {
     ul {
         li {
             margin: 0;
@@ -52,22 +52,21 @@
         .btn-custom {
             background-color: #ffff !important;
             border-radius: 8px;
-            color: #337AB7;
+            color: rgba(0, 143, 104, 0.95);
             letter-spacing: 1px;
             padding: 10px 20px;
-            font-size: 1em;
+            font-size: 1.3em;
             text-decoration: none;
             cursor: pointer;
             border-radius: 0;
             text-transform: capitalize;
             font-style: italic;
-            line-height: 1;
-            border: none;
+            line-height: 5;
             transition: all .1s linear;
             box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
             &:hover {
                 color: #ffff !important;
-                background-color: #337AB7 !important;
+                background-color: #499C5A !important;
                 transform: translateY(3px);
             }
             &:active {
@@ -75,13 +74,23 @@
                 transform: translateY(3px);
             }
         }
-        .caption {
-            display: block;
-            overflow: hidden;
+        ul.list-group {
+            li {
+                border: none;
+                padding: 5px;
+                i {
+                    padding-right: 5px;
+                    color: #337AB7;
+                }
+                &:hover {
+                    border: none;
+                    cursor: text;
+                    a {
+                        background: none;
+                        border: none !important;
+                    }
+                }
+            }
         }
     }
-}
-
-.section-banner {
-    background-image: url("../../../../../assets/images/business-loan.jpg");
 }

@@ -18,6 +18,8 @@ import { BalanceTransferTopUpLoanComponent } from "./components/products/balance
 import { LoginComponent } from "./components/navigation/login/login.component";
 import { FeaturesDetailsWizardComponent } from "./components/products/features-details-wizard/features-details-wizard.component";
 import { RegisterFormComponent } from "./components/navigation/register-form/register-form.component";
+import { PersonalLoanCreateApplicationComponent } from './components/products/personal-loan/personal-loan-create-application/personal-loan-create-application.component';
+import { PersonalLoanUpdateApplicationComponent } from './components/products/personal-loan/personal-loan-update-application/personal-loan-update-application.component';
 
 @NgModule({
   imports: [
@@ -40,7 +42,9 @@ import { RegisterFormComponent } from "./components/navigation/register-form/reg
     BalanceTransferTopUpLoanComponent,
     LoginComponent,
     FeaturesDetailsWizardComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    PersonalLoanCreateApplicationComponent,
+    PersonalLoanUpdateApplicationComponent
   ],
   entryComponents: [LoginComponent, RegisterFormComponent],
   providers: [LoadingService]

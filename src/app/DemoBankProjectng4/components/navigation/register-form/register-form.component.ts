@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ModalComponent } from './../../../../lib/modal/modal.component';
 import {
   FormGroup,
@@ -10,7 +10,8 @@ import {
 @Component({
   selector: 'app-register-form',
   templateUrl: './register-form.component.html',
-  styleUrls: ['./register-form.component.scss']
+  styleUrls: ['./register-form.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class RegisterFormComponent implements OnInit {
   applyForm: FormGroup;
@@ -23,6 +24,7 @@ export class RegisterFormComponent implements OnInit {
       name: ['', Validators.required],
       phone: ['', Validators.required],
       email: ['', Validators.required],
+      dob: [''],
       city: [''],
       pincode: [''],
       jobType: [''],
