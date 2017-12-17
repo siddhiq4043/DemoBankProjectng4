@@ -16,10 +16,10 @@
         </div>
         <div class="col-lg-4 col-md-4">
             <div class="form-group">
-                <label for="employeeType">Employement Type</label>
+                <label for="employeeType">Employment Type</label>
                 <select class="form-control" [(ngModel)]="empTypeData" id="employeeType">
-                    <option [ngValue]="undefined">Select the Employement Type</option>
-                    <option *ngFor="let empType of employementTypeList" [ngValue]="empType.id">
+                    <option [ngValue]="undefined">Select the Employment Type</option>
+                    <option *ngFor="let empType of employmentTypeList" [ngValue]="empType.id">
                       {{ empType.empType }}
                     </option>
               </select>

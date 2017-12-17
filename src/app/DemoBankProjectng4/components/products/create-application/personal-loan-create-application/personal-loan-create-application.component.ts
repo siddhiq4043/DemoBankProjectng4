@@ -13,7 +13,7 @@ export class PersonalLoanCreateApplicationComponent implements OnInit {
   private sub: any;
   @ViewChild('staticTabs') staticTabs: TabsetComponent;
   loanTypeList: any = [];
-  employementTypeList: any = [];
+  employmentTypeList: any = [];
   loanTypeData: any;
   empTypeData: any;
   constructor(
@@ -25,7 +25,7 @@ export class PersonalLoanCreateApplicationComponent implements OnInit {
     this.staticTabs.tabs[1].disabled = true;
     this.staticTabs.tabs[2].disabled = true;
     this.loanTypeList = LoanTypeDropdown;
-    this.employementTypeList = EmployementTypeDropdown;
+    this.employmentTypeList = EmploymentTypeDropdown;
     this.sub = this.route.queryParams.subscribe(
       queryParams => {
         this.loanTypeData = queryParams['loanType'];
@@ -60,25 +60,21 @@ export const LoanTypeDropdown = [
       'loanType': 'Balance Transfer TopUp Loan',
   }
 ];
-export const EmployementTypeDropdown = [
+export const EmploymentTypeDropdown = [
   {
       'id': '1',
       'empType': 'Salaried',
   },
   {
       'id': '2',
-      'empType': 'Self Employed',
+      'empType': 'Self Employed Business',
   },
   {
       'id': '3',
-      'empType': 'Business',
-  },
-  {
-      'id': '4',
       'empType': 'Self Employed Professionals',
   },
   {
-      'id': '5',
+      'id': '4',
       'empType': 'NRI',
   }
 ];
