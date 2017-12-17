@@ -1,0 +1,214 @@
+<div class="container personal-create-details">
+    <div class="col-lg-12 col-md-12 padding-none">
+        <h1>Create a New Application for Personal Loans</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4">
+            <div class="form-group">
+                <label for="loanType">Loan Type</label>
+                <select class="form-control" [(ngModel)]="loanTypeData" id="loanType">
+                    <option [ngValue]="undefined">Select the Loan Type</option>
+                    <option *ngFor="let loanType of loanTypeList" [ngValue]="loanType.id">
+                      {{ loanType.loanType }}
+                    </option>
+              </select>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <div class="form-group">
+                <label for="employeeType">Employement Type</label>
+                <select class="form-control" [(ngModel)]="empTypeData" id="employeeType">
+                    <option [ngValue]="undefined">Select the Employement Type</option>
+                    <option *ngFor="let empType of employementTypeList" [ngValue]="empType.id">
+                      {{ empType.empType }}
+                    </option>
+              </select>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12">
+            <tabset #staticTabs>
+                <tab [heading]="'Basic Information'">
+                    <div class="col-lg-12 col-md-12 content-panel padding-none">
+                        <form>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Full Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="birthDate">Date of Birth</label>
+                                    <input type="date" id="birthDate" class="form-control" placeholder="Date of Birth">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="number" class="form-control" id="phone" placeholder="Phone">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <select id="city" class="form-control">
+                                        <option value="">Select the City</option>
+                                        <option>Hyderabad</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="location">Location</label>
+                                    <select id="location" class="form-control">
+                                        <option value="">Select the Location</option>
+                                        <option>Rahmath Nagar</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <button type="submit" class="btn btn-default">Discard</button>
+                                <button type="submit" class="btn btn-default">Save </button>
+                                <button type="submit" (click)="selectTab(1)" class="btn btn-default">Next</button>
+                            </div>
+                        </form>
+                    </div>
+                </tab>
+                <tab [heading]="'Contact Details'">
+                    <div class="col-lg-12 col-md-12 content-panel">
+                        <form>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" id="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="identity">Identity</label>
+                                    <select id="identity" class="form-control">
+                                        <option value="">Select the Identity</option>
+                                        <option>PAN Card</option>
+                                        <option>Addahar Card</option>
+                                        <option>Vote Election Card</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="card">PAN Card</label>
+                                    <input type="text" class="form-control" id="card" placeholder="PAN Card">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label for="currentAddress">Current Address</label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Permanent Address same as Current Address?
+                                      </label>
+                                    <textarea type="text" class="form-control" id="currentAddress" placeholder="Current Address"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label for="permanentAddress">Permanent Address</label>
+                                    <textarea type="text" class="form-control" id="permanentAddress" placeholder="Permanent Address"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <button type="submit" (click)="selectTab(1)" class="btn btn-default">Previous</button>
+                                <button type="submit" class="btn btn-default">Discard</button>
+                                <button type="submit" class="btn btn-default">Save </button>
+                                <button type="submit" (click)="selectTab(2)" class="btn btn-default">Next</button>
+                            </div>
+                        </form>
+                    </div>
+                </tab>
+                <tab [heading]="'Employee Details'">
+                    <div class="col-lg-12 col-md-12 content-panel">
+                        <form>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="companyName">Company Name</label>
+                                    <input type="text" class="form-control" id="companyName" placeholder="Company Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="totalAnnualIncome">Total Annual Income</label>
+                                    <input type="text" class="form-control" id="totalAnnualIncome" placeholder="Total Annual Income">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="netSalary">Net Salary(Take Home)</label>
+                                    <input type="text" class="form-control" id="netSalary" placeholder="Net Salary(Take Home)">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="experience">Total Experience</label>
+                                    <select id="experience" class="form-control">
+                                        <option value="">Select the Total Experience</option>
+                                        <option>0 - 6 Months</option>
+                                        <option>6 - 12 Months</option>
+                                        <option>1 - 2 Years</option>
+                                        <option>More Than 2 Years</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="form16">Form 16</label>
+                                    <select id="form16" class="form-control">
+                                        <option value="">Please select</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="previousLoan">Having Any Previous Loans</label>
+                                    <select id="previousLoan" class="form-control">
+                                        <option value="">Select the Previous Loans</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="previousTypeLoan">If yes, Select the Type of Loans</label>
+                                    <select id="previousTypeLoan" class="form-control">
+                                        <option value="">Select the Previous Type of Loans</option>
+                                        <option>Personal Laon</option>
+                                        <option>Business Loan</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="previousLoanAmount">If yes, Loan Amount</label>
+                                    <input type="text" class="form-control" id="previousLoanAmount" placeholder="Loan Amount">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="form-group">
+                                    <label for="previousemi">If yes, Monthly EMI Amount</label>
+                                    <input type="text" class="form-control" id="previousemi" placeholder="Monthly EMI Amount">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <button type="submit" (click)="selectTab(1)" class="btn btn-default">Previous</button>
+                                <button type="submit" class="btn btn-default">Discard</button>
+                                <button type="submit" class="btn btn-default">Save </button>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+</div>

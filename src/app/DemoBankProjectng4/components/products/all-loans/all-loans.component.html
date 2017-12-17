@@ -11,7 +11,7 @@
                         <div class="caption">
                             <h4>{{subLoans.title}}</h4>
                             <a routerLink="{{subLoans.routeUrl}}" class="col-md-12 btn btn-info btn-xs btn-custom margin-bottom-10" role="button">Know More</a>
-                            <a routerLink="{{subLoans.createRouteUrl}}" class="col-md-6 btn btn-info btn-xs btn-custom" role="button">Create</a>
+                            <a routerLink="{{subLoans.createRouteUrl}}" [queryParams]="{ loanType: subLoans.id, empType: allLoans.id  }" queryParamsHandling="merge" class="col-md-6 btn btn-info btn-xs btn-custom" role="button">Create</a>
                             <a routerLink="{{subLoans.updateRouteUrl}}" class="col-md-6 btn btn-info btn-xs btn-custom" role="button">Update</a>
                         </div>
                     </div>

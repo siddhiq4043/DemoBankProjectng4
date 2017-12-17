@@ -10,7 +10,7 @@ import { PersonalLoanComponent } from './components/products/personal-loan/perso
 import { HouseLoanComponent } from './components/products/house-loan/house-loan.component';
 import { BusinessLoanComponent } from './components/products/business-loan/business-loan.component';
 import { BalanceTransferTopUpLoanComponent } from './components/products/balance-transfer-top-up-loan/balance-transfer-top-up-loan.component';
-import { PersonalLoanCreateApplicationComponent } from './components/products/personal-loan/personal-loan-create-application/personal-loan-create-application.component';
+import { PersonalLoanCreateApplicationComponent } from './components/products/create-application/personal-loan-create-application/personal-loan-create-application.component';
 import { PersonalLoanUpdateApplicationComponent } from './components/products/personal-loan/personal-loan-update-application/personal-loan-update-application.component';
 
 const demoBankng4Routes: Routes = [

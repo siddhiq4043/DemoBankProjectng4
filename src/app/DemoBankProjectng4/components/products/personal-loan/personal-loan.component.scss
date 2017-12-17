@@ -1,5 +1,7 @@
-.personal-loan{
-    .apply-btn{
+.personal-loan {
+    .content-section {
+        margin-bottom: 20px;
+        .apply-btn {
             background-color: #ffff !important;
             border-radius: 8px;
             color: #337AB7;
@@ -24,5 +26,6 @@
                 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
                 transform: translateY(3px);
             }
-     }
+        }
+    }
 }

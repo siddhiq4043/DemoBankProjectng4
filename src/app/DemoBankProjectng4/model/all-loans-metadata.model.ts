@@ -59,6 +59,8 @@ export const AllLoansMetadata = [
         imgPath: 'http://placehold.it/500x250/EEE',
         buttonCaption: '',
         routeUrl: '/products/personal-loans',
+        createRouteUrl: '/products/personal-loans/personal-loan-create-application',
+        updateRouteUrl: '/products/personal-loans/personal-loan-update-application',
         show: true
       },
       {
@@ -106,6 +108,8 @@ export const AllLoansMetadata = [
         imgPath: 'http://placehold.it/500x250/EEE',
         buttonCaption: '',
         routeUrl: '/products/loan-against-property',
+        createRouteUrl: '/products/personal-loans/personal-loan-create-application',
+        updateRouteUrl: '/products/personal-loans/personal-loan-update-application',
         show: true
       },
       {
@@ -153,6 +157,8 @@ export const AllLoansMetadata = [
         imgPath: 'http://placehold.it/500x250/EEE',
         buttonCaption: '',
         routeUrl: '/products/loan-against-property',
+        createRouteUrl: '/products/personal-loans/personal-loan-create-application',
+        updateRouteUrl: '/products/personal-loans/personal-loan-update-application',
         show: true
       },
       {
@@ -200,6 +206,8 @@ export const AllLoansMetadata = [
         imgPath: 'http://placehold.it/500x250/EEE',
         buttonCaption: '',
         routeUrl: '/products/loan-against-property',
+        createRouteUrl: '/products/personal-loans/personal-loan-create-application',
+        updateRouteUrl: '/products/personal-loans/personal-loan-update-application',
         show: true
       },
       {
