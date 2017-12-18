@@ -3,6 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { MenuMetadata } from './../../model/menu-metadata.model';
 import { ModalComponent } from './../../../lib/modal/modal.component';
 import { LoginComponent } from './../navigation/login/login.component';
+import { AppNotify } from './../../../shared/services/app-notify.service';
+
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -12,7 +14,8 @@ import { LoginComponent } from './../navigation/login/login.component';
 export class NavigationComponent implements OnInit {
   menuMetadata: any;
   @ViewChild('loginModal') loginModal: ModalComponent;
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router, private route: ActivatedRoute,
+    private appNotify: AppNotify) {}
 
   ngOnInit() {
     this.menuMetadata = MenuMetadata;
@@ -27,5 +30,6 @@ export class NavigationComponent implements OnInit {
 
   refreshLogin(data) {
     console.log(data);
+    this.appNotify.success('Register successfully.');
   }
 }

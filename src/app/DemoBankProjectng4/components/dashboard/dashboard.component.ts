@@ -10,7 +10,7 @@ import { CarouselMetadata } from './../../model/carousel-metadata.model';
   styleUrls: ['./dashboard.component.scss'],
   encapsulation: ViewEncapsulation.None,
   providers: [
-    { provide: CarouselConfig, useValue: { interval: 1500, noPause: true } }
+    { provide: CarouselConfig, useValue: { interval: 3000, noPause: true } }
   ]
 })
 export class DashboardComponent implements OnInit {

@@ -13,6 +13,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts/release';
 import { LoadingService } from './services/loading.service';
 import { LoginRedirectComponent } from './components/login-redirect/login-redirect.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { AppNotify } from './services/app-notify.service';
 
 @NgModule({
   imports: [
@@ -40,6 +41,6 @@ import { LoaderComponent } from './components/loader/loader.component';
     NgxChartsModule,
     LoaderComponent
   ],
-  providers: [ToasterService, LoadingService]
+  providers: [ToasterService, LoadingService, AppNotify]
 })
 export class SharedModule {}

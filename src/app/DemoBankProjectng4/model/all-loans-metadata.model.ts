@@ -15,7 +15,7 @@ export const AllLoansMetadata = [
         show: true
       },
       {
-        id: 2,
+        id: 3,
         title: 'House Loan',
         imgPath: 'http://placehold.it/500x250/EEE',
         buttonCaption: '',
@@ -23,7 +23,7 @@ export const AllLoansMetadata = [
         show: true
       },
       {
-        id: 3,
+        id: 4,
         title: 'Loan Against Property',
         imgPath: 'http://placehold.it/500x250/EEE',
         buttonCaption: '',
@@ -31,7 +31,7 @@ export const AllLoansMetadata = [
         show: true
       },
       {
-        id: 4,
+        id: 5,
         title: 'Balance Transfer TopUp Loan',
         imgPath: 'http://placehold.it/500x250/EEE',
         buttonCaption: '',
@@ -144,7 +144,7 @@ export const AllLoansMetadata = [
     show: true,
     subLoansList: [
       {
-        id: 1,
+        id: 4,
         title: 'Loan Against Property',
         imgPath: 'http://placehold.it/500x250/EEE',
         buttonCaption: '',
@@ -152,7 +152,7 @@ export const AllLoansMetadata = [
         show: true
       },
       {
-        id: 2,
+        id: 5,
         title: 'Balance Transfer TopUp Loan',
         imgPath: 'http://placehold.it/500x250/EEE',
         buttonCaption: '',

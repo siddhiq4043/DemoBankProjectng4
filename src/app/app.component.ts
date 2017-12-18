@@ -25,4 +25,11 @@ export class AppComponent implements OnInit {
     this.loadingService.toggleLoadingIndicator(true);
     this.router.events.subscribe(() => window.scrollTo(0, 0));
   }
+  public toasterconfig: ToasterConfig =
+  new ToasterConfig({
+      showCloseButton: true,
+      tapToDismiss: false,
+      timeout: 4000,
+      positionClass: 'toast-top-center'
+  });
 }
