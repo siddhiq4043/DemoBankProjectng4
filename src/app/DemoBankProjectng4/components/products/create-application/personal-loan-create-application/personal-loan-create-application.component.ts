@@ -87,8 +87,8 @@ export class PersonalLoanCreateApplicationComponent implements OnInit {
     this.appNotify.success('Data saved successfully.');
   }
 
-  selectPreviousLoan() {
-    if (this.createApplicationData['previousLoan'] === 'No') {
+  selectPreviousLoan(value) {
+    if (value === 'No') {
       this.createApplicationData['previousTypeLoan'] = undefined;
       this.createApplicationData['previousLoanAmount'] = undefined;
       this.createApplicationData['previousemi'] = undefined;
