@@ -1,14 +1,19 @@
-<div class="container personal-loan">
-    <div class="col-lg-12 col-md-12 padding-none content-section">
-        <h1>Personal Loans</h1>
-        <p>Planning a grand wedding? Selecting a school for your child? or Waiting to book that exotic vacation you have been planning? We can help you with our customised personal loan offering. Let us be a part of your journey and help you to achieve your
-            dreams & goals.</p>
-        <button type="submit" class="apply-btn pull-right" (click)="apply()">Apply
-          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-      </button>
-        <a [routerLink]="['/products','personal-loans','personal-loan-create-application']" [queryParams]="{ loanType: '1'  }" class="btn apply-btn" role="button">Create</a>
-        <a [routerLink]="['/products','personal-loans','personal-loan-update-application']" class="btn apply-btn" role="button">Update</a>
+<div class="container-fluid personal-loan padding-none">
+    <div class="col-lg-12 col-md-12 padding-none margin-bottom-10">
+        <img src="assets/images/personal-loan-1600x400.png" class="img-responsive">
     </div>
-    <app-features-details-wizard></app-features-details-wizard>
+    <div class="container">
+        <div class="col-lg-12 col-md-12 padding-none content-section">
+            <h1>Personal Loans</h1>
+            <p>Planning a grand wedding? Selecting a school for your child? or Waiting to book that exotic vacation you have been planning? We can help you with our customised personal loan offering. Let us be a part of your journey and help you to achieve
+                your dreams & goals.</p>
+            <button type="submit" class="apply-btn pull-right" (click)="apply()">Apply
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          </button>
+            <a [routerLink]="['/products','personal-loans','personal-loan-create-application']" [queryParams]="{ loanType: '1'  }" class="btn apply-btn" role="button">Create</a>
+            <a [routerLink]="['/products','personal-loans','personal-loan-update-application']" class="btn apply-btn" role="button">Update</a>
+        </div>
+        <app-features-details-wizard></app-features-details-wizard>
+    </div>
 </div>
 <app-modal #applyModal (modalOutput)="refreshApply($event)"></app-modal>
