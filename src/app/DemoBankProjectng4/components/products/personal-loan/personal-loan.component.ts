@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personal-loan.component.scss']
 })
 export class PersonalLoanComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit() {}
+  refreshApply(event) {
+    console.log(event);
   }
 }

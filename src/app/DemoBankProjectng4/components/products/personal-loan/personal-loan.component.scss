@@ -2,4 +2,29 @@
     .content-section {
         margin-bottom: 20px;
     }
+    .btn-custom {
+        background-color: #ffff !important;
+        border-radius: 8px;
+        color: #337AB7;
+        letter-spacing: 1px;
+        padding: 10px 20px;
+        font-size: 1em;
+        text-decoration: none;
+        border-radius: 0;
+        text-transform: capitalize;
+        font-style: italic;
+        line-height: 1;
+        border: none;
+        transition: all .1s linear;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+        &:hover {
+            color: #ffff !important;
+            background-color: #337AB7 !important;
+            transform: translateY(3px);
+        }
+        &:active {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+            transform: translateY(3px);
+        }
+    }
 }
