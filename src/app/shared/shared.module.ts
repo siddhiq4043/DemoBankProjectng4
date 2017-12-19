@@ -13,7 +13,9 @@ import { NgxChartsModule } from '@swimlane/ngx-charts/release';
 import { LoadingService } from './services/loading.service';
 import { LoginRedirectComponent } from './components/login-redirect/login-redirect.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { LibraryModule } from '../lib/lib.module';
 import { AppNotify } from './services/app-notify.service';
+import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
 
 @NgModule({
   imports: [
@@ -25,9 +27,10 @@ import { AppNotify } from './services/app-notify.service';
     HttpClientModule,
     RouterModule,
     ToasterModule,
-    NgxChartsModule
+    NgxChartsModule,
+    LibraryModule
   ],
-  declarations: [LoginRedirectComponent, LoaderComponent],
+  declarations: [LoginRedirectComponent, LoaderComponent, RegistrationFormComponent],
   exports: [
     CarouselModule,
     CommonModule,
@@ -39,7 +42,8 @@ import { AppNotify } from './services/app-notify.service';
     ToasterModule,
     LoginRedirectComponent,
     NgxChartsModule,
-    LoaderComponent
+    LoaderComponent,
+    RegistrationFormComponent
   ],
   providers: [ToasterService, LoadingService, AppNotify]
 })

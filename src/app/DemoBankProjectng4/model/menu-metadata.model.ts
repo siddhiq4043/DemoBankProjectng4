@@ -77,7 +77,7 @@ export const MenuMetadata = [
       },
       {
         id: 3,
-        title: 'Interest Rates &amp; Charges',
+        title: 'Interest Rates & Charges',
         iconName: 'fa-percent',
         routeUrl: '/interest-rates-charges'
       },

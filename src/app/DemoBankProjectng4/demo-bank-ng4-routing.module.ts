@@ -12,6 +12,13 @@ import { BusinessLoanComponent } from './components/products/business-loan/busin
 import { BalanceTransferTopUpLoanComponent } from './components/products/balance-transfer-top-up-loan/balance-transfer-top-up-loan.component';
 import { PersonalLoanCreateApplicationComponent } from './components/products/create-application/personal-loan-create-application/personal-loan-create-application.component';
 import { PersonalLoanUpdateApplicationComponent } from './components/products/personal-loan/personal-loan-update-application/personal-loan-update-application.component';
+import { LocateUsComponent } from './components/locate-us/locate-us.component';
+import { CustomerServicesComponent } from './components/customer-services/customer-services.component';
+import { FaqsComponent } from './components/customer-services/faqs/faqs.component';
+import { CustomerSupportComponent } from './components/customer-services/customer-support/customer-support.component';
+import { InterestRatesChargesComponent } from './components/customer-services/interest-rates-charges/interest-rates-charges.component';
+import { PayOnlineComponent } from './components/customer-services/pay-online/pay-online.component';
+import { GstFaqComponent } from './components/customer-services/gst-faq/gst-faq.component';
 
 const demoBankng4Routes: Routes = [
   {
@@ -118,7 +125,57 @@ const demoBankng4Routes: Routes = [
     children: [
       {
         path: '',
-        component: DashboardComponent
+        component: CustomerServicesComponent
+      },
+      {
+        path: 'faqs',
+        component: NavigationComponent,
+        children: [
+          {
+            path: '',
+            component: FaqsComponent
+          }
+        ]
+      },
+      {
+        path: 'customer-support',
+        component: NavigationComponent,
+        children: [
+          {
+            path: '',
+            component: CustomerSupportComponent
+          }
+        ]
+      },
+      {
+        path: 'interest-rates-charges',
+        component: NavigationComponent,
+        children: [
+          {
+            path: '',
+            component: InterestRatesChargesComponent
+          }
+        ]
+      },
+      {
+        path: 'pay-online',
+        component: NavigationComponent,
+        children: [
+          {
+            path: '',
+            component: PayOnlineComponent
+          }
+        ]
+      },
+      {
+        path: 'gst-faq',
+        component: NavigationComponent,
+        children: [
+          {
+            path: '',
+            component: GstFaqComponent
+          }
+        ]
       }
     ]
   },
@@ -128,7 +185,7 @@ const demoBankng4Routes: Routes = [
     children: [
       {
         path: '',
-        component: DashboardComponent
+        component: LocateUsComponent
       }
     ]
   }

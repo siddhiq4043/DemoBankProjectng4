@@ -7,6 +7,7 @@ import {
   Validators
 } from '@angular/forms';
 import { AppNotify } from './../../../../shared/services/app-notify.service';
+import { Register } from './../../../../shared/model/register.model';
 
 @Component({
   selector: 'app-register-form',
@@ -18,7 +19,7 @@ export class RegisterFormComponent implements OnInit {
   loanTypeList: any = [];
   employmentTypeList: any = [];
   applyForm: FormGroup;
-  applyData: any = [];
+  applyData: Register = new Register();
 
   constructor(private _fb: FormBuilder, private modal: ModalComponent,
     private appNotify: AppNotify) {}
@@ -30,15 +31,18 @@ export class RegisterFormComponent implements OnInit {
       name: ['', Validators.required],
       phone: ['', Validators.required],
       email: ['', Validators.required],
-      dob: [''],
-      city: [''],
-      pincode: [''],
-      jobType: [''],
-      products: ['']
+      annualIncome: [''],
+      birthDate: [''],
+      loanType: [''],
+      employeetype: [''],
+      loanrequired: [''],
+      contactTime: [''],
+      agree: ['', Validators.required]
     });
   }
   confirmApply() {
-    this.modal.close('data');
+    this.modal.close();
+    console.log(this.applyData);
     this.appNotify.success('Register successfully.');
   }
 }
