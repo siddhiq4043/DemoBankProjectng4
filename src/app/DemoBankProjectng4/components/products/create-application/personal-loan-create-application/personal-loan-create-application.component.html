@@ -6,7 +6,7 @@
         <div class="col-lg-4 col-md-4">
             <div class="form-group">
                 <label for="loanType">Loan Type</label>
-                <select class="form-control" [(ngModel)]="loanTypeData" id="loanType">
+                <select class="form-control" [(ngModel)]="loanTypeData" id="loanType" [disabled]="loanTypeData">
                     <option [ngValue]="undefined">Select the Loan Type</option>
                     <option *ngFor="let loanType of loanTypeList" [ngValue]="loanType.id">
                       {{ loanType.loanType }}
@@ -17,9 +17,9 @@
         <div class="col-lg-4 col-md-4">
             <div class="form-group">
                 <label for="employeeType">Employment Type</label>
-                <select class="form-control" [(ngModel)]="empTypeData" id="employeeType">
+                <select class="form-control" (change)="selectempType($event.target.value)" [disabled]="empTypeData" [(ngModel)]="empTypeData" id="employeeType">
                     <option [ngValue]="undefined">Select the Employment Type</option>
-                    <option *ngFor="let empType of employmentTypeList" [ngValue]="empType.id">
+                    <option *ngFor="let empType of employmentTypeList" [value]="empType.id">
                       {{ empType.empType }}
                     </option>
               </select>
@@ -138,7 +138,7 @@
                 <tab [heading]="'Employee Details'">
                     <div class="col-lg-12 col-md-12 content-panel">
                         <form [formGroup]="employeeDetailsForm">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" *ngIf="hideSelfEmployeeBusiness">
                                 <div class="form-group">
                                     <label for="companyName">Company Name</label>
                                     <input type="text" class="form-control" formControlName="companyName" [(ngModel)]="createApplicationData.companyName" id="companyName" placeholder="Company Name">
@@ -150,13 +150,13 @@
                                     <input type="text" class="form-control" formControlName="totalAnnualIncome" [(ngModel)]="createApplicationData.totalAnnualIncome" id="totalAnnualIncome" placeholder="Total Annual Income">
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" *ngIf="hideSelfEmployeeBusiness">
                                 <div class="form-group">
                                     <label for="netSalary">Net Salary(Take Home)</label>
                                     <input type="text" class="form-control" formControlName="netSalary" [(ngModel)]="createApplicationData.netSalary" id="netSalary" placeholder="Net Salary(Take Home)">
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" *ngIf="hideSelfEmployeeBusiness">
                                 <div class="form-group">
                                     <label for="experience">Total Experience</label>
                                     <select id="experience" class="form-control" formControlName="experience" [(ngModel)]="createApplicationData.experience">
@@ -217,10 +217,100 @@
                                 <button type="submit" (click)="selectTab(1)" class="btn btn-default">Previous</button>
                                 <button type="submit" class="btn btn-default">Discard</button>
                                 <button type="submit" class="btn btn-default" (click)="generateApplicationData(createApplicationData)">Save </button>
-                                <button type="submit" class="btn btn-default" [disabled]="!employeeDetailsForm.valid">Submit</button>
+                                <button type="submit" class="btn btn-default" *ngIf="hideSelfEmployeeBusiness" [disabled]="!employeeDetailsForm.valid">Submit</button>
+                                <button type="submit" (click)="selectTab(3)" *ngIf="!hideSelfEmployeeBusiness" class="btn btn-default">Previous</button>
                             </div>
                         </form>
                     </div>
+                </tab>
+                <tab [heading]="'Business Details'">
+                    <ng-template [ngIf]="!hideSelfEmployeeBusiness">
+                        <div class="col-lg-12 col-md-12 content-panel">
+                            <form [formGroup]="employeeDetailsForm">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" *ngIf="hideSelfEmployeeBusiness">
+                                    <div class="form-group">
+                                        <label for="companyName">Company Name</label>
+                                        <input type="text" class="form-control" formControlName="companyName" [(ngModel)]="createApplicationData.companyName" id="companyName" placeholder="Company Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                    <div class="form-group">
+                                        <label for="totalAnnualIncome">Total Annual Income</label>
+                                        <input type="text" class="form-control" formControlName="totalAnnualIncome" [(ngModel)]="createApplicationData.totalAnnualIncome" id="totalAnnualIncome" placeholder="Total Annual Income">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" *ngIf="hideSelfEmployeeBusiness">
+                                    <div class="form-group">
+                                        <label for="netSalary">Net Salary(Take Home)</label>
+                                        <input type="text" class="form-control" formControlName="netSalary" [(ngModel)]="createApplicationData.netSalary" id="netSalary" placeholder="Net Salary(Take Home)">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" *ngIf="hideSelfEmployeeBusiness">
+                                    <div class="form-group">
+                                        <label for="experience">Total Experience</label>
+                                        <select id="experience" class="form-control" formControlName="experience" [(ngModel)]="createApplicationData.experience">
+                                              <option [ngValue]="undefined">Select the Total Experience</option>
+                                              <option value="0 - 6 Months">0 - 6 Months</option>
+                                              <option value="6 - 12 Months">6 - 12 Months</option>
+                                              <option value="1 - 2 Years">1 - 2 Years</option>
+                                              <option value="More Than 2 Years">More Than 2 Years</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                    <div class="form-group">
+                                        <label for="form16">Form 16</label>
+                                        <select id="form16" class="form-control" formControlName="form16" [(ngModel)]="createApplicationData.form16">
+                                              <option [ngValue]="undefined">Please select</option>
+                                              <option value="Yes">Yes</option>
+                                              <option value="No">No</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                    <div class="form-group">
+                                        <label for="previousLoan">Having Any Previous Loans</label>
+                                        <select id="previousLoan" (change)="selectPreviousLoan($event.target.value)" class="form-control" formControlName="previousLoan" [(ngModel)]="createApplicationData.previousLoan">
+                                              <option [ngValue]="undefined">Select the Previous Loans</option>
+                                              <option value="Yes">Yes</option>
+                                              <option value="No">No</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <ng-container *ngIf="createApplicationData.previousLoan == 'Yes'">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="form-group">
+                                            <label for="previousTypeLoan">If yes, Select the Type of Loans</label>
+                                            <select class="form-control" id="previousTypeLoan" formControlName="previousTypeLoan" [(ngModel)]="createApplicationData.previousTypeLoan">
+                                                  <option [ngValue]="undefined">Select the Loan Type</option>
+                                                  <option *ngFor="let loanType of loanTypeList" [ngValue]="loanType.id">
+                                                    {{ loanType.loanType }}
+                                                  </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="form-group">
+                                            <label for="previousLoanAmount">If yes, Loan Amount</label>
+                                            <input type="text" class="form-control" formControlName="previousLoanAmount" [(ngModel)]="createApplicationData.previousLoanAmount" id="previousLoanAmount" placeholder="Loan Amount">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        <div class="form-group">
+                                            <label for="previousemi">If yes, Monthly EMI Amount</label>
+                                            <input type="text" class="form-control" formControlName="previousemi" [(ngModel)]="createApplicationData.previousemi" id="previousemi" placeholder="Monthly EMI Amount">
+                                        </div>
+                                    </div>
+                                </ng-container>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <button type="submit" (click)="selectTab(2)" class="btn btn-default">Previous</button>
+                                    <button type="submit" class="btn btn-default">Discard</button>
+                                    <button type="submit" class="btn btn-default" (click)="generateApplicationData(createApplicationData)">Save </button>
+                                    <button type="submit" class="btn btn-default" [disabled]="!employeeDetailsForm.valid">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </ng-template>
                 </tab>
             </tabset>
         </div>

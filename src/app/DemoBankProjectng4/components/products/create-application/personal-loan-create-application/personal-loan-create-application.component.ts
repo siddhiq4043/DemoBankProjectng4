@@ -28,6 +28,7 @@ export class PersonalLoanCreateApplicationComponent implements OnInit {
   basicInfoForm: FormGroup;
   contactDetailsForm: FormGroup;
   employeeDetailsForm: FormGroup;
+  hideSelfEmployeeBusiness: boolean;
 
   constructor(
     private route: ActivatedRoute,
@@ -40,6 +41,8 @@ export class PersonalLoanCreateApplicationComponent implements OnInit {
     this.isPermanentAddress = false;
     this.staticTabs.tabs[1].disabled = true;
     this.staticTabs.tabs[2].disabled = true;
+    this.staticTabs.tabs[3].disabled = true;
+    this.hideSelfEmployeeBusiness = true;
     this.loanTypeList = LoanTypeDropdown;
     this.employmentTypeList = EmploymentTypeDropdown;
     this.identityTypeList = IdentityTypeDropdown;
@@ -47,6 +50,11 @@ export class PersonalLoanCreateApplicationComponent implements OnInit {
     this.sub = this.route.queryParams.subscribe(queryParams => {
       this.loanTypeData = queryParams['loanType'];
       this.empTypeData = queryParams['empType'];
+      if (this.empTypeData === '2') {
+        this.hideSelfEmployeeBusiness = false;
+      } else {
+        this.removeTabHandler('3');
+      }
     });
     this.basicInfoForm = this._fb.group({
       name: ['', Validators.required],
@@ -93,6 +101,17 @@ export class PersonalLoanCreateApplicationComponent implements OnInit {
       this.createApplicationData['previousLoanAmount'] = undefined;
       this.createApplicationData['previousemi'] = undefined;
     }
+  }
+  selectempType(value) {
+    if (value === '2') {
+      this.hideSelfEmployeeBusiness = false;
+    } else {
+      this.hideSelfEmployeeBusiness = true;
+    }
+  }
+  removeTabHandler(tab: any): void {
+    this.staticTabs.tabs.splice(tab, 1);
+    console.log('Remove Tab handler');
   }
 }
 
