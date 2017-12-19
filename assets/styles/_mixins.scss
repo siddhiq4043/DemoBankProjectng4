@@ -1,0 +1,55 @@
+@mixin opacity($opacity){
+          opacity: $opacity;
+       -o-opacity: $opacity;
+      -ms-opacity: $opacity;
+     -moz-opacity: $opacity;
+  -webkit-opacity: $opacity;
+  filter:alpha(opacity= #{$opacity * 100});
+}
+
+@mixin box-shadow($shadow...){
+          box-shadow: $shadow;
+       -o-box-shadow: $shadow;
+      -ms-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+}
+
+@mixin border-radius($border-radius){
+          border-radius: $border-radius;
+       -o-border-radius: $border-radius;
+      -ms-border-radius: $border-radius;
+     -moz-border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+}
+
+@mixin transition($transition...){
+          transition: $transition;
+       -o-transition: $transition;
+      -ms-transition: $transition;
+     -moz-transition: $transition;
+  -webkit-transition: $transition;  
+}
+
+@mixin box-sizing($border-sizing){
+          box-sizing: $border-sizing;
+       -o-box-sizing: $border-sizing;
+      -ms-box-sizing: $border-sizing;
+     -moz-box-sizing: $border-sizing;
+  -webkit-box-sizing: $border-sizing;
+}
+
+@mixin text-shadow($text-shadow...){
+          text-shadow: $text-shadow;
+       -o-text-shadow: $text-shadow;
+      -ms-text-shadow: $text-shadow;
+     -moz-text-shadow: $text-shadow;
+  -webkit-text-shadow: $text-shadow;
+}
+
+
+@mixin respond-to($media) {
+    @media #{$media} {
+        @content;
+    }
+}
