@@ -8,55 +8,55 @@ body {
 
 // Common Styles
 .padding-none {
-    padding: 0!important;
+    padding: $padding-0!important;
 }
 
 .padding-right-none {
-    padding-right: 0!important
+    padding-right: $padding-0!important
 }
 
 .padding-left-none {
-    padding-left: 0!important
+    padding-left: $padding-0!important
 }
 
 .padding-top-none {
-    padding-top: 0!important
+    padding-top: $padding-0!important
 }
 
 .padding-bottom-none {
-    padding-bottom: 0!important
+    padding-bottom: $padding-0!important
 }
 
 .margin-none {
-    margin: 0!important;
+    margin: $margin-0!important;
 }
 
 .margin-right-none {
-    margin-right: 0!important
+    margin-right: $margin-0!important
 }
 
 .margin-left-none {
-    margin-left: 0!important
+    margin-left: $margin-0!important
 }
 
 .margin-top-none {
-    margin-top: 0!important
+    margin-top: $margin-0!important
 }
 
 .margin-bottom-none {
-    margin-bottom: 0!important
+    margin-bottom: $margin-0!important
 }
 
 .padding-10 {
-    padding: 10px;
+    padding: $padding-10;
 }
 
 .margin-bottom-50 {
-    margin-bottom: 50px !important;
+    margin-bottom: $margin-10*5 !important;
 }
 
 .margin-bottom-10 {
-    margin-bottom: 10px !important;
+    margin-bottom: $margin-10 !important;
 }
 
 .cursor-pointer {
@@ -65,11 +65,11 @@ body {
 
 h1 {
     font-size: 3em;
-    line-height: 2;
-    font-weight: 200;
-    font-style: italic;
-    text-transform: capitalize;
-    color: #000000;
+    line-height: $line-height-0+2;
+    font-weight: $font-weight-100*2;
+    font-style: $font-style-italic;
+    text-transform: $text-transform-capitalize;
+    color: $black-color;
 }
 
 
