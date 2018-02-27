@@ -1,86 +1,54 @@
-$theme-color: #3498db;
-$theme-background-color: #FFFFFF;
-//$theme-background-color: #F5F8FB;
-// $theme-color-hover: #4f88a1;
-$theme-color-disable: #a5adb8;
-$theme-highlight-1: #a8d3f0;
-$theme-highlight-2: rgba(204, 234, 241, 0.4);
-$error-color: #bb3800;
-// $success-color: #44cead;
-$hover-color: lighten(saturate(adjust-hue($theme-color, 0.3031), 30.1255), 40.5882);
-$light-hover-color: #edf3f7;
-//$profile-color : #26cfa2;
-$profile-color: $theme-color;
-/*Toast colors*/ 
-$toast-color: #f9edbe;
-$toast-success-color: #26C281;
-$toast-error-color: #bd362f;
-$toast-info-color: #3598DC;
-$toast-wait-color: #9480e0;
-$toast-warning-color: #f89406;
-
-/*common colors*/
-$gray-color: #555555;
-$gray-color-1: #90949c;
-$light-gray-color : #CCCCCC;
-$white-color: #ffffff;
+/* colors*/
 $black-color: #000000;
-$red-color: #fa3e3e;
-$black-color-2: #555555;
+$white-color: #ffffff;
+$theme-color: #004a8f;
+$theme-hover-color: #337AB7;
 
-/*Box Shadow*/
-$box-shadow-color: #dee1e7;
-$box-shadow-color-1:rgba(0,24,55,0.25);
+/* Border*/
+$border-0: 0px;
+$border-5:10px;
+$border-10:10px;
 
-/*Font*/ 
-$label-font-size: 11px;
-$data-font-size: 12px;
-$page-title-font-size: 13px;
-$breadcrumb-font-size: 12px;
-$card-font-size: 12px;
-$dropdown-font-size: 12px;
-$app-font-family: PT Sans Caption;
-//$app-font-family: 'Lato';
-$error-font-family: 'Arima Madurai', cursive;
+/* text*/
+$text-transform-uppercase: uppercase;
+$text-transform-capitalize: capitalize;
+$text-transform-lowercase: lowercase;
 
-/*icons*/
-$icon-size:18px;
-$icon-font-size: 8px;
-$close-icon-color: #aaaaaa;
+/* font-style*/
+$font-style-italic:italic;
+$font-style-normal:normal;
+$font-style-oblique:oblique;
 
-/*Components*/
-//$label-color:#909090;
-$label-color:#000000;
-$border-color:#dee1e7;
-$border-top-color: #e5e6e9;
-$border-sides-color:#dfe0e4 ;
-$border-bottom-color: #d0d1d5;
-$title-bar-color:#2c858d;
-$text-input-color:#333;
-$dropdown-background-color: #CCCCCC;
-$circles-display-name: $theme-color;
-$member-circle-color: $theme-color;
-$modal-color: $theme-color;
-//$list-header-color:#fff;
-$list-header-color:$label-color;
-$text-color:#5c6b7e;
+/* line height*/
+$line-height-0: 0px;
+$line-height-5: 5px;
+$line-height-10: 10px;
 
-// $header-background: rgba(204, 234, 241, 0.4);
-$border-color-1: #DDDDDD;
-// $dropdown-bottom-color: #8A8A8A;
-// $horizontal-row-color: #C8C8C8;
+/* border-radius*/
+$border-radius-0: 0px;
+$border-radius-5: 5px;
+$border-radius-10: 10px;
 
-$font-thin: 100;
-$font-light: 300;
-$font-normal: 400;
-$font-bold: 600;
-$font-bolder: 700;
-$font-ultraBold: 900;
+/* font-size*/
+$font-size-0: 0px;
+$font-size-5: 5px;
+$font-size-10: 10px;
 
-$card-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+/* padding*/
+$padding-0:0px;
+$padding-5:5px;
+$padding-10:10px;
 
-//Media Queries Responsive
-$phone : '(max-width: 480px)';
-$tablet-portrait: '(max-width: 768px)';
-$tablet-landscape: '(min-width: 769px) and (max-width: 979px)';
-$large-desktop: '(min-width: 1200px)';
+/* font-weight*/
+$font-weight-100: 100;
+$font-weight-bold: bold;
+$font-weight-lighter: lighter;
+$font-weight-normal: normal;
+
+/* margin*/
+$margin-0:0px;
+$margin-5:5px;
+$margin-10:10px;
+
+
+
