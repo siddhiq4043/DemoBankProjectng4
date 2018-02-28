@@ -1,16 +1,18 @@
+@import '../../../../assets/styles/variables';
+
 .home-section {
     .carousel.slide {
         .carousel-control.left,
         .carousel-control.right {
             background-image: none;
             top: 40%;
-            position: absolute;
+            position: absolute; 
             height: 40px;
-            background: #004a8f;
+            background: $theme-color;
             width: 30px;
             cursor: pointer;
             outline: none;
-            padding: 4px;
+            padding: $padding-0+4;
             .icon-next {
                 top: 30%;
                 right: 32%;
@@ -37,10 +39,10 @@
                 text-indent: -999px;
                 background-color: rgba(255, 255, 255, .5);
                 border: none;
-                border-radius: 0;
-                margin: 0;
+                border-radius: $border-radius-0;
+                margin: $margin-0;
                 &.active {
-                    background-color: #fff;
+                    background-color:$white-color;
                 }
             }
         }
