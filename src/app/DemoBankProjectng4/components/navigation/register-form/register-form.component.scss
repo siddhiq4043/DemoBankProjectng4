@@ -1,27 +1,29 @@
+@import '../../../../../assets/styles/variables';
+
 .register-form {
     .panel-default {
         border: none !important;
-        margin: 0;
+        margin: $margin-0;
         box-shadow: none;
         .panel-body {
             .form-group {
                 .form-control {
                     height: 35px;
-                    font-size: 15px;
-                    border-radius: 0;
+                    font-size: $font-size-10+5;
+                    border-radius: $font-size-0;
                 }
                 .register-btn {
                     background-color: #ffff !important;
-                    border-radius: 8px;
-                    color: #337AB7;
+                    border-radius: $font-size-10(-2);
+                    color: $theme-hover-color;
                     letter-spacing: 1px;
-                    padding: 10px 20px;
-                    font-size: 1em;
+                    padding: $padding-10 $padding-10*2;
+                    font-size: $font-size-0+1;
                     text-decoration: none;
-                    border-radius: 0;
-                    text-transform: capitalize;
-                    font-style: italic;
-                    line-height: 1;
+                    border-radius: $border-radius-0;
+                    text-transform: $text-transform-capitalize;
+                    font-style: $font-style-italic;
+                    line-height: $line-height-0+1;
                     border: none;
                     transition: all .1s linear;
                     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);

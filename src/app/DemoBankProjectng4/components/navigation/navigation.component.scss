@@ -1,5 +1,7 @@
+@import '../../../../assets/styles/variables';
+
 .nav-menu-bar {
-    background: #004a8f;
+    background:$theme-color;
     border: none;
     .navbar-header {
         .navbar-brand {
@@ -9,10 +11,10 @@
     .navbar-nav {
         li {
             a {
-                padding-top: 25px;
-                padding-bottom: 25px;
+                padding-top: $padding-5+20;
+                padding-bottom: $padding-5+20;
                 font-size: 1.1em;
-                color: #ffffff;
+                color: $white-color;
                 &:hover {
                     color: #ffffff !important;
                     background-color: #337AB7 !important;
@@ -28,14 +30,14 @@
             }
         }
         .dropdown-menu {
-            background: #004a8f;
+            background: $theme-color;
             li {
                 ul.multi-level {
-                    background: #004a8f;
+                    background: $theme-color;
                 }
                 a {
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    padding-top: $padding-10;
+                    padding-bottom: $padding-10;
                 }
             }
         }
